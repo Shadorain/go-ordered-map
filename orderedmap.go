@@ -3,7 +3,8 @@
 //
 // All operations are constant-time.
 //
-// Github repo: https://github.com/wk8/go-ordered-map
+// Github repo: https://github.com/Shadorain/go-ordered-map
+// Forked from: https://github.com/wk8/go-ordered-map
 package orderedmap
 
 import (
@@ -387,7 +388,7 @@ func From[K comparable, V any](i iter.Seq2[K, V]) *OrderedMap[K, V] {
 	return oMap
 }
 
-func (om *OrderedMap[K, V]) Filter(predicate func (K, V) bool) {
+func (om *OrderedMap[K, V]) Filter(predicate func(K, V) bool) {
 	for pair := om.Oldest(); pair != nil; {
 		key, value := pair.Key, pair.Value
 		pair = pair.Next()

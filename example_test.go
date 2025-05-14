@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/wk8/go-ordered-map/v2"
+	"github.com/Shadorain/go-ordered-map/v2"
 )
 
 func Example() {
